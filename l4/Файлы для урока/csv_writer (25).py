@@ -1,6 +1,7 @@
 import csv
 
-names = ['name', 'height', 'mass', 'hair_color', 'skin_color']
+# names = ['name', 'height', 'mass', 'hair_color', 'skin_color']
+# names2 = ['name2', 'height', 'mass', 'hair_color', 'skin_color']
 rows = [
     ['Luke Skywalker', '172', '77', 'blond', 'fair'],
     ['C-3PO', '167', '75', 'NA', 'gold'],
@@ -11,6 +12,7 @@ rows = [
 ]
 
 with open('data.csv', 'w', newline='') as file:
-    data = csv.writer(file)
-    data.writerow(names)
+    data = csv.writer(file, delimiter='|')
+    # data.writerow(names)
+    # data.writerow(names2)
     data.writerows(rows)
